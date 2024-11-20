@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0pqn6mlrvv7y"
+path="res://.godot/imported/Pokemon Platinum OST — Villa Audio System_ Bossa Nova Lilycove (www.lightaudio.ru).mp3-96b6a8a96791c3f5a646429e53d346cd.mp3str"
+
+[deps]
+
+source_file="res://Music/Non_Battle/Location/Pokemon Platinum OST — Villa Audio System_ Bossa Nova Lilycove (www.lightaudio.ru).mp3"
+dest_files=["res://.godot/imported/Pokemon Platinum OST — Villa Audio System_ Bossa Nova Lilycove (www.lightaudio.ru).mp3-96b6a8a96791c3f5a646429e53d346cd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
