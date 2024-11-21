@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5ued1h84i2an"]
+[gd_scene load_steps=7 format=3 uid="uid://b5ued1h84i2an"]
 
 [ext_resource type="Texture2D" uid="uid://db4ixgm8bau5l" path="res://textures/1.png" id="1_4j5gi"]
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_alsth"]
 [ext_resource type="Texture2D" uid="uid://uc688t83wtlu" path="res://textures/2.png" id="2_en2uu"]
 [ext_resource type="PackedScene" uid="uid://c0vss8d5nmrhs" path="res://Scenes/menu_bg.tscn" id="4_p0rgs"]
+[ext_resource type="AudioStream" uid="uid://s1b4qm4cjbyg" path="res://Music/Non_Battle/Menu/Pokemon Platinum OST — Mystery Gift (www.lightaudio.ru).mp3" id="5_uafjf"]
+[ext_resource type="Script" path="res://Scenes/audio_stream_player_2d.gd" id="6_odr4i"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_alsth")
@@ -17,16 +19,31 @@ theme_override_font_sizes/font_size = 24
 text = "Играть"
 icon = ExtResource("1_4j5gi")
 
+[node name="Option" type="Button" parent="."]
+offset_left = 431.0
+offset_top = 335.0
+offset_right = 718.0
+offset_bottom = 422.0
+theme_override_font_sizes/font_size = 24
+text = "Настройки"
+
 [node name="Quit" type="Button" parent="."]
 offset_left = 432.0
-offset_top = 339.0
+offset_top = 427.0
 offset_right = 719.0
-offset_bottom = 426.0
+offset_bottom = 514.0
 theme_override_font_sizes/font_size = 24
 text = "Выйти"
 icon = ExtResource("2_en2uu")
 
 [node name="Menu_BG" parent="." instance=ExtResource("4_p0rgs")]
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_uafjf")
+autoplay = true
+max_distance = 1.56643e+09
+script = ExtResource("6_odr4i")
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Option" to="." method="_on_option_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

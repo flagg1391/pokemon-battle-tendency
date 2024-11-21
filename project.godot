@@ -14,3 +14,8 @@ config/name="Pokemon: Battle Tendency"
 run/main_scene="res://Scenes/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/resizable=false
+window/size/borderless=true
