@@ -2,6 +2,8 @@ extends Node2D
 
 
 @onready var option_button = $Screen as OptionButton
+var screen_size
+var window_size
 
 
 func _on_back_pressed() -> void:
@@ -25,7 +27,9 @@ func on_window_mode_selected(index: int) -> void:
 	match index:
 		0: #Оконный режим
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
-		1: #Полный экран
+			
+		1:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, false)
+			screen_size = DisplayServer.screen_get_size()
+			window_size = DisplayServer.window_get_size()
+			DisplayServer.window_set_position(screen_size*0.5 - window_size*0.5)
