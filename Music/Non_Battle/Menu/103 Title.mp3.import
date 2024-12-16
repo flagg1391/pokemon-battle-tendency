@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cc6ie0dddvf7w"
+path="res://.godot/imported/103 Title.mp3-6551d6b69de3af8023dbdb38ecb9a629.mp3str"
+
+[deps]
+
+source_file="res://Music/Non_Battle/Menu/103 Title.mp3"
+dest_files=["res://.godot/imported/103 Title.mp3-6551d6b69de3af8023dbdb38ecb9a629.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

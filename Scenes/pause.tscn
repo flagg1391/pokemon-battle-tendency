@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnp2tn0enmnbn"]
+
+[ext_resource type="FontFile" uid="uid://bfdod5rv6a80j" path="res://textures/DotGothic16-Regular.ttf" id="1_c6r5w"]
+
+[node name="Pause" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 360.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 356.0
+theme_override_constants/separation = 49
+
+[node name="Resume" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_c6r5w")
+text = "Продолжить"
+
+[node name="Pokemon" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_c6r5w")
+text = "Покемоны"
+
+[node name="Options" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_c6r5w")
+text = "Настройки
+"
+
+[node name="Save" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_c6r5w")
+text = "Сохранение
+"
+
+[node name="Exit" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_c6r5w")
+text = "Выход
+"

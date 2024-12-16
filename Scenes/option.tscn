@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://2qj08pct25ab"]
+[gd_scene load_steps=6 format=3 uid="uid://2qj08pct25ab"]
 
 [ext_resource type="PackedScene" uid="uid://c0vss8d5nmrhs" path="res://Scenes/menu_bg.tscn" id="1_7000d"]
 [ext_resource type="Script" path="res://Scenes/option.gd" id="1_ml2ip"]
 [ext_resource type="AudioStream" uid="uid://s1b4qm4cjbyg" path="res://Music/Non_Battle/Menu/Pokemon Platinum OST — Mystery Gift (www.lightaudio.ru).mp3" id="3_gwtg8"]
 [ext_resource type="Script" path="res://Scenes/audio_stream_player_2d.gd" id="4_w0v6x"]
+[ext_resource type="FontFile" uid="uid://bfdod5rv6a80j" path="res://textures/DotGothic16-Regular.ttf" id="5_qnmlp"]
 
 [node name="Option" type="Node2D"]
 script = ExtResource("1_ml2ip")
@@ -21,12 +22,15 @@ offset_left = 444.0
 offset_top = 377.0
 offset_right = 662.0
 offset_bottom = 440.0
+theme_override_fonts/font = ExtResource("5_qnmlp")
+clip_text = true
 
 [node name="Back" type="Button" parent="."]
 offset_left = 446.0
 offset_top = 461.0
 offset_right = 662.0
 offset_bottom = 542.0
+theme_override_fonts/font = ExtResource("5_qnmlp")
 text = "Назад"
 
 [connection signal="item_selected" from="Screen" to="." method="_on_screen_item_selected"]
