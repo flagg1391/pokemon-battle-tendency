@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://duvhfe4ugnxjh"]
+
+[ext_resource type="FontFile" uid="uid://bfdod5rv6a80j" path="res://textures/DotGothic16-Regular.ttf" id="1_0dyip"]
+[ext_resource type="Script" path="res://Scenes/create_character.gd" id="1_fvhap"]
+
+[node name="create_character" type="Node2D"]
+script = ExtResource("1_fvhap")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+offset_left = 391.0
+offset_top = 136.0
+offset_right = 767.0
+offset_bottom = 321.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_0dyip")
+theme_override_font_sizes/font_size = 30
+text = "Кто ты?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="female" type="Button" parent="Label"]
+offset_left = 300.0
+offset_top = 141.0
+offset_right = 455.0
+offset_bottom = 296.0
+text = "Девочка
+"
+icon_alignment = 1
+
+[node name="male" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = -93.0
+offset_top = 140.0
+offset_right = 62.0
+offset_bottom = 295.0
+text = "Мальчик"
+icon_alignment = 1
+
+[connection signal="pressed" from="Label/female" to="." method="_on_девочка_pressed"]
+[connection signal="pressed" from="Label/male" to="." method="_on_male_pressed"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbrf4l23gywia"]
+
+[ext_resource type="FontFile" uid="uid://bfdod5rv6a80j" path="res://textures/DotGothic16-Regular.ttf" id="1_8piac"]
+[ext_resource type="Script" path="res://Scenes/pause_options.gd" id="1_t78ug"]
+
+[node name="pause_options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t78ug")
+
+[node name="Screen" type="OptionButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.0
+offset_top = -29.0
+offset_right = 192.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_8piac")
+clip_text = true
